@@ -19,7 +19,7 @@ firebase.auth().onAuthStateChanged(() => {
   }
 })
 
-$('form').submit((e) => {
+$('.login-page form').submit((e) => {
   e.preventDefault()
   var email = $('input[type="email"]').val()
   var password = $('input[type="password"]').val()
