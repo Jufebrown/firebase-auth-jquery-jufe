@@ -7,9 +7,6 @@ firebase.initializeApp({
   messagingSenderId: "653707776406"
 })
 
-
-
-
 firebase.auth().onAuthStateChanged(() => {
   if (firebase.auth().currentUser !== null) {
   var email = firebase.auth().currentUser.email
