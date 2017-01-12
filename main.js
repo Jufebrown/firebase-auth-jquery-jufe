@@ -55,3 +55,13 @@ $('.register').click(()=>{
     $('form')[0].reset()
   })
 })
+
+$('.main-page form').submit((e) => {
+  e.preventDefault()
+  var task = $('.main-page input[type="text"]').val()
+  var uid = firebase.auth().currentUser.uid
+  $.post(
+    `https://c17-firebase-auth-jufe.firebaseio.com/${uid}.json`,
+    JSON.stringify({task : task})
+  ).then(console.log)
+})
